@@ -6,8 +6,7 @@ namespace Tyuiu.AkopovaLV.Sprint5.Task1.V16.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
-
+            string path = @"C:\Users\Admin\source\repos\Tyuiu.AkopovaLV.Sprint5\Tyuiu.AkopovaLV.Sprint5.Task1.V16\bin\Debug\net8.0\OutPutFileTask1.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
 
@@ -28,7 +27,7 @@ namespace Tyuiu.AkopovaLV.Sprint5.Task1.V16.Lib
                 }
                 else
                 {
-                    y = Math.Round(Math.Sin(x) + (2.0 * x) / 3.0 - Math.Cos(x) * 4.0 * x, 2);
+                    y = Math.Round(Math.Sin(x) + (2 * x) / 3 - Math.Cos(x) * 4 * x, 2);
                 }
                 strY = Convert.ToString(y);
 
