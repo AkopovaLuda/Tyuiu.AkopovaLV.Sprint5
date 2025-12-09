@@ -28,7 +28,7 @@ namespace Tyuiu.AkopovaLV.Sprint5.Task1.V16.Lib
                 }
                 else
                 {
-                    y = Math.Round(Math.Sin(x) + (2 * x) / 3 - Math.Cos(x) * 4 * x, 2);
+                    y = Math.Round(Math.Sin(x) + (2.0 * x) / 3.0 - Math.Cos(x) * 4.0 * x, 2);
                 }
                 strY = Convert.ToString(y);
 
