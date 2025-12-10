@@ -6,39 +6,36 @@ namespace Tyuiu.AkopovaLV.Sprint5.Task1.V16.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = @"C:\Users\Admin\source\repos\Tyuiu.AkopovaLV.Sprint5\Tyuiu.AkopovaLV.Sprint5.Task1.V16\bin\Debug\net8.0\OutPutFileTask1.txt";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
-
             if (fileExists)
             {
                 File.Delete(path);
             }
-
             double y;
-            string strY;
-            for (int x = startValue; x <= stopValue; x++)
-            {
-                double zero = 2 * x - 0.5;
 
-                if (zero == 0)
-                {
-                    return Convert.ToString(0);
-                }
-                else
-                {
-                    y = Math.Round(Math.Sin(x) + (2 * x) / 3 - Math.Cos(x) * 4 * x, 2);
-                }
-                strY = Convert.ToString(y);
+            for (double x = startValue; x <= stopValue; x++)
+            {
+                int numDigitsAfterPoint = 2;
+
+                y = Math.Sin(x) + ((2.0 * x) / 3.0) - (Math.Cos(x) * 4.0 * x);
+                y = Math.Round(y, 2);
+                string result = y.ToString("0." + new string('0', numDigitsAfterPoint));
 
                 if (x != stopValue)
                 {
-                    File.AppendAllText(path, strY + Environment.NewLine);
+                    File.AppendAllText(path, result + Environment.NewLine);
                 }
                 else
                 {
-                    File.AppendAllText(path, strY);
+                    File.AppendAllText(path, result);
                 }
+                if (double.IsInfinity(y) || double.IsNaN(y))
+                {
+                    y = 0;
+                }
+
             }
             return path;
         }
