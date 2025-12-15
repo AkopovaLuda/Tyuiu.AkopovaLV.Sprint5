@@ -4,13 +4,13 @@ internal class Program
     private static void Main(string[] args)
     {
         DataService ds = new DataService();
-        Console.Title = "Спринт #5 | Выполнил: Гогин М. А. | АСОиУБ-23-1";
+        Console.Title = "Спринт #5 | Выполнила: Акопова Л. В. | АСОиУб-25-1";
         Console.WriteLine("**************************************************************************");
         Console.WriteLine("* Спринт #5                                                              *");
         Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                *");
         Console.WriteLine("* Задание #7                                                             *");
         Console.WriteLine("* Вариант #19                                                            *");
-        Console.WriteLine("* Выполнил: Гогин Михаил Александрович | АСОиУБ-23-1                     *");
+        Console.WriteLine("* Выполнила: Акопова Людмила Владимировна | АСОиУб-25-1                  *");
         Console.WriteLine("**************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                               *");
         Console.WriteLine("* Дан файл, в котором есть набор символьных данных. Удалить все          *");
