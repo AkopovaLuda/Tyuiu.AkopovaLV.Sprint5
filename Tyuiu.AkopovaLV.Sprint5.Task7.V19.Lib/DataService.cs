@@ -28,6 +28,7 @@ namespace Tyuiu.AkopovaLV.Sprint5.Task7.V19.Lib
                     }
                 }
                 strline = strline.Replace("сс", "");
+                strline = strline.Replace("Сс", "");
                 File.AppendAllText(pathsave, strline);
 
             }
